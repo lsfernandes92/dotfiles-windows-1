@@ -1,5 +1,5 @@
-$account = "jayharris"
-$repo    = "dotfiles-windows"
+$account = "lsfernandes92"
+$repo    = "dotfiles-windows-1"
 $branch  = "master"
 
 $dotfilesTempDir = Join-Path $env:TEMP "dotfiles"
@@ -60,4 +60,3 @@ $newProcess = new-object System.Diagnostics.ProcessStartInfo "PowerShell";
 $newProcess.Arguments = "-nologo";
 [System.Diagnostics.Process]::Start($newProcess);
 exit
-
