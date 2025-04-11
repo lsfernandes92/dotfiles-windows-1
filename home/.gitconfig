@@ -38,11 +38,9 @@
     dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
     # Undo Commit; leaves files. Only for non-public commits
     uncommit = reset --soft HEAD^
-
 [apply]
     # Detect whitespace errors when applying a patch
     whitespace = warn
-
 [core]
     # Use custom `.gitignore` and `.gitattributes`
     excludesfile = ~/.gitignore
@@ -56,11 +54,15 @@
     # Make `git rebase` safer on OS X
     # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
     trustctime = false
-
+    editor = code --wait
+    fileMode = false
 [color]
     # Use colors in Git commands that are capable of colored output when
-    # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
-    ui = auto
+    # outputting to the terminal
+    diff = auto
+    status = auto
+    branch = auto
+    ui = true
 [color "branch"]
     current = yellow reverse
     local = yellow
@@ -75,11 +77,23 @@
     changed = green
     untracked = cyan
     branch = magenta
+[credential]
+    helper = manager
+[difftool]
+    prompt = false
+[help]
+    autocorrect = 1
+[hub]
+    protocol = https
 [merge]
     # Include summaries of merged commits in newly created merge commit messages
     log = true
-
-# URL shorthands
+[mergetool]
+    keepBackup = false
+[push]
+    default = simple
+[status]
+	submoduleSummary = true
 [url "git@github.com:"]
     insteadOf = "gh:"
     pushInsteadOf = "github:"
@@ -92,9 +106,3 @@
     pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
     insteadOf = "gist:"
-
-[push]
-    default = simple
-
-[credential]
-    helper = manager

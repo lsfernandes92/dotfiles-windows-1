@@ -16,7 +16,9 @@ $RECYCLE.BIN/
 .AppleDouble
 .LSOverride
 Icon
-
+*~
+*.swp
+/postgres/*
 
 # Thumbnails
 ._*
