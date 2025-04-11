@@ -68,18 +68,11 @@ When setting up a new Windows PC, you may want to set some Windows defaults and 
 
 ### Install dependencies and packages
 
-When setting up a new Windows box, you may want to install some common packages, utilities, and dependencies. These could include node.js packages via [NPM](https://www.npmjs.org), [Chocolatey](http://chocolatey.org/) packages, Windows Features and Tools via [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx), and Visual Studio Extensions from the [Visual Studio Gallery](http://visualstudiogallery.msdn.microsoft.com/).
+When setting up a new Windows box, you may want to install some common packages, utilities, and dependencies. The script will update PowerShell docs, install some PowserShell modules, and then install my common used applications using the `winget` command.
 
 ```posh
 .\deps.ps1
 ```
-
-> The scripts will install Chocolatey, node.js, and WebPI if necessary.
-
-> **Visual Studio Extensions**  
-> Extensions will be installed into your most current version of Visual Studio. You can also install additional plugins at any time via `Install-VSExtension $url`. The Url can be found on the gallery; it's the extension's `Download` link url.
-
-
 
 ## Forking your own version
 
